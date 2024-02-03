@@ -2,6 +2,53 @@ global {
 	color: #ffffff;
 }
 
+.input_date {
+    margin:1px 0px 50px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #111;
+    display: block;
+    background: #ddd;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #111111;
+    padding: 0 20px 0 20px;
+    width: 100px;
+}
+
+/* Up state */
+.custom-button {
+    background-image: url("../img/btn/mouseOut/btnClean.png"); /* Replace with your image URL */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Over state */
+.custom-button:hover {
+    background-image: url("../img/btn/mouseOver/btnClean.png"); /* Replace with your hover image URL */
+}
+
+/* Down state */
+.custom-button:active {
+    background-image: url("../img/btn/mouseDown/btnClean.png"); /* Replace with your active image URL */
+}
+
+/* Disabled state */
+.custom-button:disabled {
+    background-image: url("../img/btn/mouseUp/btnClean.png"); /* Replace with your disabled image URL */
+    cursor: not-allowed;
+}
+
+
 .closeBtn {
     upSkin:        Embed(source="flekristal_skin.swf", symbol="Panel_closeButtonUpSkin");
     overSkin:      Embed(source="flekristal_skin.swf", symbol="Panel_closeButtonUpSkin");
@@ -34,11 +81,55 @@ body{
 	font-weight: bold;
 }
 
-.top {
+Top {
 	background-color:#F2F2F2;
 	color: #FFF;
 	font-size: 14px;
 	font-weight: bold;
+}
+
+Table {
+    /*background-image:url(../img/backGround.png); */
+    color: #FFF;
+    $table-cell-padding-y:        .5rem;
+    $table-cell-padding-x:        .5rem;
+    $table-cell-padding-y-sm:     .25rem;
+    $table-cell-padding-x-sm:     .25rem;
+
+    $table-cell-vertical-align:   top;
+
+    $table-color:                 url(../img/backGround.png);
+    $table-bg:                    var(--#{$prefix}body-bg);
+    $table-accent-bg:             transparent;
+
+    $table-th-font-weight:        null;
+
+    $table-striped-color:         $table-color;
+    $table-striped-bg-factor:     .05;
+    $table-striped-bg:            rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor);
+
+    $table-active-color:          $table-color;
+    $table-active-bg-factor:      .1;
+    $table-active-bg:             rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor);
+
+    $table-hover-color:           $table-color;
+    $table-hover-bg-factor:       .075;
+    $table-hover-bg:              rgba(var(--#{$prefix}emphasis-color-rgb), $table-hover-bg-factor);
+
+    $table-border-factor:         .2;
+    $table-border-width:          var(--#{$prefix}border-width);
+    $table-border-color:          var(--#{$prefix}border-color);
+
+    $table-striped-order:         odd;
+    $table-striped-columns-order: even;
+
+    $table-group-separator-color: currentcolor;
+
+    $table-caption-color:         var(--#{$prefix}secondary-color);
+
+    $table-bg-scale:              -80%;
+}
+
 
 .increaseBtn {
 	upSkin:        Embed(source="flekristal_skin.swf", symbol="maximize");
@@ -105,8 +196,7 @@ Application {
 //  Button
 //------------------------------
 */
-Button
-{
+Button {
 	disabledSkin: Embed(source="flekristal_skin.swf", symbol="Button_disabledSkin");
 	downSkin: Embed(source="flekristal_skin.swf", symbol="Button_downSkin");
 	overSkin: Embed(source="flekristal_skin.swf", symbol="Button_overSkin");
@@ -401,7 +491,7 @@ Loader
 //  Menu
 //------------------------------
 */
-/*
+
 Menu
 {
 	branchIcon: Embed(source="flekristal_skin.swf",symbol="Menu_branchIcon");
@@ -412,7 +502,7 @@ Menu
 	radioDisabledIcon: Embed(source="flekristal_skin.swf",symbol="Menu_radioDisabledIcon");
 	separatorSkin: Embed(source="flekristal_skin.swf",symbol="Menu_separatorSkin");
 }
-*/
+
 
 /*
 //------------------------------
